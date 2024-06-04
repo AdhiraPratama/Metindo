@@ -1,0 +1,1440 @@
+[
+    {
+        "id": "e7c6cf917d4c4607",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "72c3b13b055f39ac",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "eb19882eefd5fc6f",
+        "type": "odoo-xmlrpc-config",
+        "url": "https://metindo-iot21.odoo.com/xmlrpc/2/common",
+        "db": "metindo-iot21",
+        "username": "joko.afd@gmail.com",
+        "password": "1"
+    },
+    {
+        "id": "fc78e750169ddadb",
+        "type": "ui_group",
+        "name": "WorkOrderLeft",
+        "tab": "57862229f043b03a",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2a257fe2c8e05c59",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.3.11",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "0a8802358742ea5a",
+        "type": "ui_group",
+        "name": "Machine Status",
+        "tab": "57862229f043b03a",
+        "order": 2,
+        "disp": true,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "57862229f043b03a",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "5783508a0672aee8",
+        "type": "ui_group",
+        "name": "WorkOrderRight",
+        "tab": "57862229f043b03a",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dc2dc8751360096e",
+        "type": "modbus-client",
+        "name": "",
+        "clienttype": "simpleser",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB0",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "bad9aee6facf2e2b",
+        "type": "inject",
+        "z": "e7c6cf917d4c4607",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "test",
+        "payload": "Test",
+        "payloadType": "str",
+        "x": 140,
+        "y": 60,
+        "wires": [
+            [
+                "341bbffe45bfa549"
+            ]
+        ]
+    },
+    {
+        "id": "341bbffe45bfa549",
+        "type": "function",
+        "z": "e7c6cf917d4c4607",
+        "name": "function 3",
+        "func": "var noid=msg.payload.noid;\nvar stest=msg.payload.test;\nvar nmsg={payload:{\"test\":stest,\"id\":noid}};\nreturn nmsg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7c29c00fa9da2e29",
+        "type": "odoo-xmlrpc-search-read",
+        "z": "e7c6cf917d4c4607",
+        "name": "Read_WO",
+        "host": "eb19882eefd5fc6f",
+        "model": "mrp.workorder",
+        "filter": "",
+        "offset": 0,
+        "limit": 100,
+        "x": 450,
+        "y": 180,
+        "wires": [
+            [
+                "dfc5def6c0027021",
+                "b75479758bba1849"
+            ]
+        ]
+    },
+    {
+        "id": "872c5215f2ccf6e7",
+        "type": "function",
+        "z": "e7c6cf917d4c4607",
+        "name": "filterWO",
+        "func": "msg.filters=[[['state', '!=', 'done'],['state','!=','cancel']]];\nmsg.fields = (['id','name','state','product_id','production_id','workcenter_id','qty_producing','qty_done','qty_production','qty_produced']); \nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 180,
+        "wires": [
+            [
+                "7c29c00fa9da2e29"
+            ]
+        ]
+    },
+    {
+        "id": "dfc5def6c0027021",
+        "type": "ui_table",
+        "z": "e7c6cf917d4c4607",
+        "group": "fc78e750169ddadb",
+        "name": "WorkOrder Left",
+        "order": 3,
+        "width": "10",
+        "height": "9",
+        "columns": [
+            {
+                "field": "id",
+                "title": "ID",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "workcenter_id",
+                "title": "Workcenter",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "qty_production",
+                "title": "Set Qty",
+                "width": "",
+                "align": "right",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "qty_producing",
+                "title": "Current Qty",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "state",
+                "title": "Status",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": true,
+        "x": 620,
+        "y": 180,
+        "wires": [
+            [
+                "dceb8152c693645a",
+                "b3d2af5453836fc4"
+            ]
+        ]
+    },
+    {
+        "id": "dceb8152c693645a",
+        "type": "function",
+        "z": "e7c6cf917d4c4607",
+        "name": "WO-ID",
+        "func": "var noid={payload:msg.payload.id}\nnoid.topic=\"woid\";\nreturn noid;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 100,
+        "wires": [
+            [
+                "f123238902a724d9",
+                "74a766242663cf71"
+            ]
+        ]
+    },
+    {
+        "id": "99de77c3bbeb7a76",
+        "type": "odoo-xmlrpc-update",
+        "z": "e7c6cf917d4c4607",
+        "name": "",
+        "host": "eb19882eefd5fc6f",
+        "model": "mrp.workorder",
+        "filter": "",
+        "offset": 0,
+        "limit": 100,
+        "x": 1120,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "74a766242663cf71",
+        "type": "function",
+        "z": "e7c6cf917d4c4607",
+        "name": "function 5",
+        "func": "context.data = context.data || {};\n\nif (msg.topic== \"woid\") {\n        context.data.woid = msg.payload;\n}\nif (msg.topic== \"counter_left\") {\n        context.data.counter_left = msg.payload;\n} \n\nvar noid=context.data.woid;\nvar qtyp=context.data.counter_left;\nmsg.payload=[[noid], {'qty_producing': qtyp}];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 140,
+        "wires": [
+            [
+                "99de77c3bbeb7a76"
+            ]
+        ]
+    },
+    {
+        "id": "0486a5bac7888628",
+        "type": "inject",
+        "z": "e7c6cf917d4c4607",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "4",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 180,
+        "wires": [
+            [
+                "872c5215f2ccf6e7"
+            ]
+        ]
+    },
+    {
+        "id": "16438a4feb9bdf20",
+        "type": "mqtt in",
+        "z": "e7c6cf917d4c4607",
+        "name": "Machine",
+        "topic": "machine1/sMachine",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "2a257fe2c8e05c59",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 380,
+        "wires": [
+            [
+                "9c48d117e50a3fb1"
+            ]
+        ]
+    },
+    {
+        "id": "3d5603aa985bbdf8",
+        "type": "mqtt in",
+        "z": "e7c6cf917d4c4607",
+        "name": "Pause",
+        "topic": "machine1/sPause",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "2a257fe2c8e05c59",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 420,
+        "wires": [
+            [
+                "f9447f674feaa083"
+            ]
+        ]
+    },
+    {
+        "id": "a95467ad96bfeb65",
+        "type": "mqtt in",
+        "z": "e7c6cf917d4c4607",
+        "name": "CounterL",
+        "topic": "machine1/sCounterL",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "2a257fe2c8e05c59",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 460,
+        "wires": [
+            [
+                "30f17d362a8cedbe"
+            ]
+        ]
+    },
+    {
+        "id": "f01b39c67f250d4a",
+        "type": "mqtt in",
+        "z": "e7c6cf917d4c4607",
+        "name": "CounterR",
+        "topic": "machine1/sCounterR",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "2a257fe2c8e05c59",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 500,
+        "wires": [
+            [
+                "aaa392ec2ef3d9a4"
+            ]
+        ]
+    },
+    {
+        "id": "1b93a8c1bb4cb550",
+        "type": "mqtt in",
+        "z": "e7c6cf917d4c4607",
+        "name": "Quality",
+        "topic": "machine1/sQuality",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "2a257fe2c8e05c59",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 540,
+        "wires": [
+            [
+                "8ce5975127de1983"
+            ]
+        ]
+    },
+    {
+        "id": "64e1638988795ff9",
+        "type": "mqtt in",
+        "z": "e7c6cf917d4c4607",
+        "name": "Maintenance",
+        "topic": "machine1/sMaintenance",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "2a257fe2c8e05c59",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 580,
+        "wires": [
+            [
+                "63f8b9cc2b875b07"
+            ]
+        ]
+    },
+    {
+        "id": "0b649beaee28a21c",
+        "type": "mqtt in",
+        "z": "e7c6cf917d4c4607",
+        "name": "Problem",
+        "topic": "machine1/sProblem",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "2a257fe2c8e05c59",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 620,
+        "wires": [
+            [
+                "e3d05eb3d272effd"
+            ]
+        ]
+    },
+    {
+        "id": "9c48d117e50a3fb1",
+        "type": "ui_led",
+        "z": "e7c6cf917d4c4607",
+        "order": 3,
+        "group": "0a8802358742ea5a",
+        "width": "6",
+        "height": "2",
+        "label": "Machine",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "1",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "0",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 330,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "f9447f674feaa083",
+        "type": "ui_led",
+        "z": "e7c6cf917d4c4607",
+        "order": 3,
+        "group": "0a8802358742ea5a",
+        "width": "6",
+        "height": "2",
+        "label": "Pause",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "1",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "0",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 330,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "30f17d362a8cedbe",
+        "type": "ui_led",
+        "z": "e7c6cf917d4c4607",
+        "order": 3,
+        "group": "0a8802358742ea5a",
+        "width": "6",
+        "height": "2",
+        "label": "CounterL",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "1",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "0",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 330,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "aaa392ec2ef3d9a4",
+        "type": "ui_led",
+        "z": "e7c6cf917d4c4607",
+        "order": 3,
+        "group": "0a8802358742ea5a",
+        "width": "6",
+        "height": "2",
+        "label": "CounterR",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "1",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "0",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 330,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "8ce5975127de1983",
+        "type": "ui_led",
+        "z": "e7c6cf917d4c4607",
+        "order": 3,
+        "group": "0a8802358742ea5a",
+        "width": "6",
+        "height": "2",
+        "label": "Quality",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "1",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "0",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 330,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "63f8b9cc2b875b07",
+        "type": "ui_led",
+        "z": "e7c6cf917d4c4607",
+        "order": 3,
+        "group": "0a8802358742ea5a",
+        "width": "6",
+        "height": "2",
+        "label": "Maintenance",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "1",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "0",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 330,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "e3d05eb3d272effd",
+        "type": "ui_led",
+        "z": "e7c6cf917d4c4607",
+        "order": 3,
+        "group": "0a8802358742ea5a",
+        "width": "6",
+        "height": "2",
+        "label": "Problem",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "1",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "0",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 330,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "f123238902a724d9",
+        "type": "ui_text",
+        "z": "e7c6cf917d4c4607",
+        "group": "0a8802358742ea5a",
+        "order": 8,
+        "width": "6",
+        "height": "2",
+        "name": "",
+        "label": "ID-WO",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 930,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "b3d2af5453836fc4",
+        "type": "function",
+        "z": "e7c6cf917d4c4607",
+        "name": "WO-Status",
+        "func": "var stwo={payload:msg.payload.state}\nstwo.topic=\"status_wo\";\nvar stat=msg.payload.state;\nif (stat==\"ready\") {\n    stwo.enabled=true;\n}\nelse {\n    stwo.enabled=false;\n}\nreturn stwo;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 400,
+        "wires": [
+            [
+                "f12c3bd60b912756",
+                "74a766242663cf71"
+            ]
+        ]
+    },
+    {
+        "id": "f12c3bd60b912756",
+        "type": "ui_button",
+        "z": "e7c6cf917d4c4607",
+        "name": "",
+        "group": "fc78e750169ddadb",
+        "order": 1,
+        "width": "5",
+        "height": "1",
+        "passthru": false,
+        "label": "Start Work Order Left ",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "topic.woleft",
+        "topicType": "msg",
+        "x": 1020,
+        "y": 400,
+        "wires": [
+            [
+                "78bbd97f70c42b29"
+            ]
+        ]
+    },
+    {
+        "id": "02e3fb36ef4e8997",
+        "type": "ui_text",
+        "z": "e7c6cf917d4c4607",
+        "group": "0a8802358742ea5a",
+        "order": 3,
+        "width": "6",
+        "height": "2",
+        "name": "counterR",
+        "label": "Counter R",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 340,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "bb28f0f4337273b9",
+        "type": "mqtt in",
+        "z": "e7c6cf917d4c4607",
+        "name": "CounterR",
+        "topic": "machine1/counterR",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "2a257fe2c8e05c59",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 740,
+        "wires": [
+            [
+                "02e3fb36ef4e8997"
+            ]
+        ]
+    },
+    {
+        "id": "a315a6d48f4057c6",
+        "type": "ui_switch",
+        "z": "e7c6cf917d4c4607",
+        "name": "",
+        "label": "WO L",
+        "tooltip": "",
+        "group": "0a8802358742ea5a",
+        "order": 10,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 110,
+        "y": 800,
+        "wires": [
+            [
+                "b6a70c002233a57c"
+            ]
+        ]
+    },
+    {
+        "id": "b6a70c002233a57c",
+        "type": "mqtt out",
+        "z": "e7c6cf917d4c4607",
+        "name": "stWOL",
+        "topic": "machine1/stWOL",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2a257fe2c8e05c59",
+        "x": 350,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "07e40ee2cedec727",
+        "type": "mqtt out",
+        "z": "e7c6cf917d4c4607",
+        "name": "stWOR",
+        "topic": "machine1/stWOR",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2a257fe2c8e05c59",
+        "x": 360,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "7a7707082f1d611f",
+        "type": "ui_switch",
+        "z": "e7c6cf917d4c4607",
+        "name": "",
+        "label": "WO R",
+        "tooltip": "",
+        "group": "0a8802358742ea5a",
+        "order": 10,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 110,
+        "y": 860,
+        "wires": [
+            [
+                "07e40ee2cedec727"
+            ]
+        ]
+    },
+    {
+        "id": "78bbd97f70c42b29",
+        "type": "mqtt out",
+        "z": "e7c6cf917d4c4607",
+        "name": "WO_Left",
+        "topic": "machine1/stWOL",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2a257fe2c8e05c59",
+        "x": 1220,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "9ad09b84021888b7",
+        "type": "mqtt in",
+        "z": "e7c6cf917d4c4607",
+        "name": "CounterL",
+        "topic": "machine1/counterL",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "2a257fe2c8e05c59",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 620,
+        "y": 220,
+        "wires": [
+            [
+                "3cc2be90e4634161",
+                "799d443a5ad5924d"
+            ]
+        ]
+    },
+    {
+        "id": "3cc2be90e4634161",
+        "type": "ui_text",
+        "z": "e7c6cf917d4c4607",
+        "group": "0a8802358742ea5a",
+        "order": 3,
+        "width": "6",
+        "height": "2",
+        "name": "counterl",
+        "label": "Counter L",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 780,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "799d443a5ad5924d",
+        "type": "function",
+        "z": "e7c6cf917d4c4607",
+        "name": "CounterLeft",
+        "func": "var cntl={payload:msg.payload}\ncntl.topic=\"counter_left\";\nreturn cntl;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 260,
+        "wires": [
+            [
+                "74a766242663cf71"
+            ]
+        ]
+    },
+    {
+        "id": "b75479758bba1849",
+        "type": "ui_table",
+        "z": "e7c6cf917d4c4607",
+        "group": "5783508a0672aee8",
+        "name": "WorkOrderRight",
+        "order": 3,
+        "width": "10",
+        "height": "9",
+        "columns": [
+            {
+                "field": "id",
+                "title": "ID",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "workcenter_id",
+                "title": "Workcenter",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "qty_production",
+                "title": "Set Qty",
+                "width": "",
+                "align": "right",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "qty_producing",
+                "title": "Current Qty",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "state",
+                "title": "Status",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": true,
+        "x": 680,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bc905ec7747aa5b5",
+        "type": "ui_button",
+        "z": "e7c6cf917d4c4607",
+        "name": "",
+        "group": "fc78e750169ddadb",
+        "order": 2,
+        "width": "5",
+        "height": "1",
+        "passthru": false,
+        "label": "Stop Work Order Left ",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "topic.woleft",
+        "topicType": "msg",
+        "x": 1020,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3e1b8f0d8372785c",
+        "type": "ui_button",
+        "z": "e7c6cf917d4c4607",
+        "name": "",
+        "group": "5783508a0672aee8",
+        "order": 2,
+        "width": "5",
+        "height": "1",
+        "passthru": false,
+        "label": "Stop Work Order Right",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "topic.woleft",
+        "topicType": "msg",
+        "x": 960,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fb9d0452bb5f8306",
+        "type": "ui_button",
+        "z": "e7c6cf917d4c4607",
+        "name": "",
+        "group": "5783508a0672aee8",
+        "order": 1,
+        "width": "5",
+        "height": "1",
+        "passthru": false,
+        "label": "Start Work Order Right ",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "topic.woleft",
+        "topicType": "msg",
+        "x": 960,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5423c029ef60ea85",
+        "type": "modbus-read",
+        "z": "e7c6cf917d4c4607",
+        "name": "testRegister",
+        "topic": "testMB",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Input",
+        "adr": "0",
+        "quantity": "1",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "dc2dc8751360096e",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 190,
+        "y": 980,
+        "wires": [
+            [
+                "bfd6300d3b57593f"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "dde1922e36d2f76a",
+        "type": "modbus-write",
+        "z": "e7c6cf917d4c4607",
+        "name": "testout",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "5",
+        "quantity": "1",
+        "server": "dc2dc8751360096e",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 390,
+        "y": 1060,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "08171a97de7373f2",
+        "type": "ui_switch",
+        "z": "e7c6cf917d4c4607",
+        "name": "",
+        "label": "DO",
+        "tooltip": "",
+        "group": "0a8802358742ea5a",
+        "order": 12,
+        "width": "4",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 170,
+        "y": 1060,
+        "wires": [
+            [
+                "dde1922e36d2f76a"
+            ]
+        ]
+    },
+    {
+        "id": "bfd6300d3b57593f",
+        "type": "debug",
+        "z": "e7c6cf917d4c4607",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "b0c1b9b8aba349f4",
+        "type": "odoo-xmlrpc-update",
+        "z": "e7c6cf917d4c4607",
+        "name": "",
+        "host": "eb19882eefd5fc6f",
+        "model": "mrp.workcenter",
+        "filter": "",
+        "offset": 0,
+        "limit": 100,
+        "x": 980,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2bd753fa90c891c9",
+        "type": "function",
+        "z": "e7c6cf917d4c4607",
+        "name": "function 6",
+        "func": "msg.payload=[[839], {'working_state': 'done'}];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 800,
+        "wires": [
+            [
+                "b0c1b9b8aba349f4"
+            ]
+        ]
+    },
+    {
+        "id": "33835bdd48953c9c",
+        "type": "inject",
+        "z": "e7c6cf917d4c4607",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 600,
+        "y": 860,
+        "wires": [
+            [
+                "2bd753fa90c891c9"
+            ]
+        ]
+    }
+]
